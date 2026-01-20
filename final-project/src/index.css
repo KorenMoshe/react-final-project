@@ -66,3 +66,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.listItem input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  scale: 1.5;
+}
+.listItem input[type="text"] {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  transition: 0.25s;
+}
+.listItem input[type="text"]:focus {
+  border: 1px solid #646cff;
+  scale: 1.1;
+}
