@@ -119,6 +119,10 @@ function App() {
     setErrorMessage("");
   }
 
+  function clearCompletedTasks() {
+    setTodoList(todoList.filter((item) => !item.completed));
+  }
+
   return (
     <>
       <h1>מנהל משימות</h1>
@@ -131,6 +135,18 @@ function App() {
       <AddTask addTask={addTask} />
 
       <Filters filter={filter} setFilter={setFilter} />
+
+      {(filter === "all" || filter === "completed") &&
+        todoList.some((item) => item.completed) && (
+        <div className="clear-completed-container">
+          <button
+            className="clear-completed-button"
+            onClick={clearCompletedTasks}
+          >
+            נקה משימות הושלמו
+          </button>
+        </div>
+      )}
 
       <Listitems
         todoList={filteredTodoList}

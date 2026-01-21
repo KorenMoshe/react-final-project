@@ -192,6 +192,27 @@ p {
   font-weight: 400;
 }
 
+.clear-completed-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.clear-completed-button:hover {
+  background-color: #5a6268;
+}
+
+.clear-completed-container {
+  text-align: center;
+  margin: 1rem 0;
+}
+
 button:focus-visible,
 input:focus-visible {
   outline: 2px solid #646cff;
