@@ -18,6 +18,11 @@ export function AddTask({ addTask }) {
         placeholder="הוסף משימה חדשה..."
         value={value}
         onChange={(e) => setValue(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleSubmit();
+          }
+        }}
       />
       <button className="task-input-button" onClick={handleSubmit}>
         הוסף
