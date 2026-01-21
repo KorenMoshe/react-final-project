@@ -28,7 +28,7 @@ function App() {
   const filteredTodoList = todoList.filter((item) => {
     if (filter === "active") return !item.completed;
     if (filter === "completed") return item.completed;
-    return true; // "all"
+    return true;
   });
 
   function addTask(input) {
@@ -80,7 +80,6 @@ function App() {
   function toggleEditing(id) {
     const item = todoList.find((item) => item.id === id);
 
-    // If item doesn't exist, do nothing
     if (!item) {
       return;
     }
